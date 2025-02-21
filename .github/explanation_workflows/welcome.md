@@ -7,3 +7,14 @@
 - workflow
     - jobs
         - steps
+
+
+# steps
+- jobs의 구성요소
+- 실행방법
+    - shell script
+        - shell로 다룰 수 있는 장점!
+    - reference : 다른 step
+- 구성
+    - run : 실행 명령어
+    - env : 환경 변수
