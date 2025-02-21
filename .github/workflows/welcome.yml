@@ -1,15 +1,15 @@
 name: Post welcome comment # workflow의 이름
 on: # workflow가 실행되는 조건
-  pull_request:
+  pull_requset:
     types: [opened]
 permissions:
-  pull_request: write
+  pull-requests: write
 jobs:
   build:
     name: Post welcome comment # job의 이름
     runs-on: ubuntu-latest # job이 실행되는 환경
   steps:
-    - run: gh pr comment $PR_URL --body "welcome to the repository!"  
+    - run: gh pr comment $PR_URL --body "welcome to the repository!"
       env: #step 별로 환경변수를 지정할 수 있나봄
         PR_URL: ${{github.event.pull_request.html_url}}
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
