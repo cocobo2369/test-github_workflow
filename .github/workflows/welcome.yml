@@ -2,5 +2,10 @@ name: Post welcome comment # workflow의 이름
 on: # workflow가 실행되는 조건
   pull_requset:
     types: [opened]
-    permissions:
-      pull_request: write
+permissions:
+  pull_request: write
+jobs:
+  build:
+    name: Post welcome comment # job의 이름
+    runs-on: ubuntu-latest # job이 실행되는 환경
+  
